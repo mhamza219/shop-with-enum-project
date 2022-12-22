@@ -1,0 +1,35 @@
+
+
+
+
+	<head>
+		<title>show page</title>
+		
+	</head>
+
+	<style type="text/css">  body {
+    background-color: #89e8b2;
+  }
+  
+</style>
+	<body>
+
+	<h1>Full Details<h1><br>
+	<ul>		
+	  <li>product name:<%=@shop.product_name%></li>
+	  <li>product weight:<%= @shop.weight %></li>
+	  <li>product price:<%= @shop.price %></li>
+	  <li>supplier name:<%= @shop.supplier.name %></li>
+		<li>Supplier address:<%=@shop.supplier.address%></li>
+	</ul>
+
+<%#=  image_tag(@shop.images) %>
+	<%= image_tag @shop.images, height: 300  %>
+	<form>
+		<input type = "checkbox">
+	</form>
+
+
+	</body>
+
+<%= link_to "Back to homepage", shops_path, class: "btn btn-outline-primary btn-lg" %>

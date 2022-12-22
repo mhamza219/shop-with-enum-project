@@ -1,0 +1,30 @@
+<br>
+
+  <%= link_to "Create New Shop", new_shop_path, class: "btn btn-outline-primary float-left  "%><br><br> 
+
+
+  <% @shops.each do |shop| %> 
+
+  <div class="jumbotron">
+    <h1 class="display-11"><%= shop.product_name %></h1>
+    <p class="lead"><%= shop.weight %></p>
+     <p class="lead"><%= image_tag shop.images, height: 100 if shop.images.present? %></p>
+    <hr class="my-4">
+    
+    
+   
+   <div class="text-center">
+    
+    <%= link_to "show", shop_path(shop), class: "btn btn-outline-primary btn-lg"%>
+    <%= link_to "edit", edit_shop_path(shop),class: "btn btn-outline-success btn-lg"%>
+    <%= link_to "delete", shop, method: :delete, data: {confirm: "are you sure"},class: "btn btn-outline-danger btn-lg"%><br>
+    <%= link_to shop.status, toggle_status_shop_path(shop), class: "btn btn-outline-primary btn-lg"%>
+  </div>
+   </div>
+
+
+
+  <%end%>
+  <%#= will_paginate @collection, renderer: BootstrapPagination::Rails %> 
+
+  <%= will_paginate @shops, renderer: WillPaginate::ActionView::BootstrapLinkRenderer %>
