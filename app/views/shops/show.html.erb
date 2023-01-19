@@ -33,6 +33,8 @@
 
 	
 <%#= video_tag rails_blob_path(@shop_video.video_mp4) %>
+<%#= video_tag @shop.video %>
+<%= video_tag url_for(@shop.video), controls: true %>
 	
 
 	<form>
