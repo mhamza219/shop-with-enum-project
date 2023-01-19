@@ -39,7 +39,12 @@
 
   <div class="field">
     <%= form.label :images %>
-    <%= form.file_field :images %>
+    <%= form.file_field :images, multiple: true %>
+  </div>
+
+  <div class="field">
+    <%= form.label :video %>
+    <%= form.file_field :video %>
   </div>
 
   <div class="actions">

@@ -6,5 +6,5 @@ class User < ApplicationRecord
 
   has_many :shops
 
-  enum role:{User: 1, Admin: 2, Editors:3}
+  # enum role:{User: 1, Admin: 2, Editors:3}
 end

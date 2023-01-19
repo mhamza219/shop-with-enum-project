@@ -7,11 +7,11 @@
 		
 	</head>
 
-	<style type="text/css">  body {
+<!-- 	<style type="text/css">  body {
     background-color: #89e8b2;
   }
   
-</style>
+</style> -->
 	<body>
 
 	<h1>Full Details<h1><br>
@@ -24,7 +24,17 @@
 	</ul>
 
 <%#=  image_tag(@shop.images) %>
-	<%= image_tag @shop.images, height: 300  %>
+	<%#= image_tag @shop.images, height: 100  %>
+
+<% @shop.images.each do |image| %>
+ <%= image_tag image %>
+	<%#= link_to image.filename, rails_blob_path(image, disposition: :attachment) %>
+	<% end %>
+
+	
+<%#= video_tag rails_blob_path(@shop_video.video_mp4) %>
+	
+
 	<form>
 		<input type = "checkbox">
 	</form>

@@ -59,7 +59,7 @@ class ShopsController < ApplicationController
 	private
 
 	def shop_params
-		params.require(:shop).permit(:product_name,:weight,:price, :supplier_id, :images)
+		params.require(:shop).permit(:product_name,:weight,:price, :supplier_id, images: [])
 
 	end
 end

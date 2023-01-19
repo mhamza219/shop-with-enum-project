@@ -14,15 +14,15 @@
 # end
 # puts "prin	ted"
 
-4.times do |n|
+# 4.times do |n|
 	# debugger
-	shop = Shop.create!(product_name: Faker::Name.female_first_name,
-								weight: Faker::Number.within(range: 1..10),
-								supplier_id: Supplier.first.id,
-								price: 	Faker::Number.within(range: 20..30),
-							)
+	# shop = Shop.create!(product_name: Faker::Name.female_first_name,
+	# 							weight: Faker::Number.within(range: 1..10),
+	# 							supplier_id: Supplier.first.id,
+	# 							price: 	Faker::Number.within(range: 20..30),
+	# 						)
 
-	shop.images.attach(io: File.open("#{Rails.root}/public/img/pic_#{n+1}.jpeg"), filename: shop.product_name)
+	# shop.images.attach(io: File.open("#{Rails.root}/public/img/pic_#{n+1}.jpeg"), filename: shop.product_name)
 # debugger
 # a.images.destroy
 	# a.images.attach(
@@ -31,5 +31,5 @@
  #    )
 
 
-end
+# end
 puts "5 images created"
